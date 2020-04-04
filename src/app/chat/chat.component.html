@@ -1,1 +1,12 @@
-<p>chat works!</p>
+<div class="container">
+  <ul class="alt" id="messages">
+    <app-message *ngFor="let msg of chatService.mesList; let i = index" [message]="msg"></app-message>
+  </ul>
+  <mat-form-field appearance="outline">
+    <mat-label>Outline form field</mat-label>
+    <input matInput placeholder="Placeholder" #inputElement (keydown.enter)="sendMessage(inputElement.value, $event); inputElement.value=''">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <button mat-raised-button color="accent" (click)="sendMessage(inputElement.value, $event); inputElement.value=''">Send</button>
+</div>
+

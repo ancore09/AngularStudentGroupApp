@@ -23,7 +23,7 @@ export class WebsocketService {
       this.socket.on('message', (data) => {
         // console.log('Mes received!');
         // console.log(data);
-        observer.next(data);
+        observer.next(JSON.parse(data));
       });
       return () => {
         // this.socket.emit('leave');
@@ -33,7 +33,7 @@ export class WebsocketService {
 
     this.observer = {
       next: (data: Object) => {
-        this.socket.emit('message', data/*, this.user.user.course*/);
+        this.socket.emit('message', JSON.stringify(data) /*, this.user.user.course*/);
         console.log(data);
       }
     };

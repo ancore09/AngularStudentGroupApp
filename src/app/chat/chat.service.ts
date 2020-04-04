@@ -51,6 +51,10 @@ export class ChatService {
     });
   }
 
+  addMessage(msg) {
+    this.mesList.push(msg);
+  }
+
   sendMessage(msg) {
     this.messages.next(msg);
   }

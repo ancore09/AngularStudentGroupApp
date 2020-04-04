@@ -12,13 +12,14 @@ import {
   MatButtonModule,
   MatCardModule,
   MatExpansionModule, MatFormFieldModule,
-  MatGridListModule,
+  MatGridListModule, MatIconModule, MatInputModule,
   MatListModule, MatPaginatorModule, MatSelectModule,
   MatSidenavModule, MatSortModule, MatTableModule, MatTabsModule,
   MatToolbarModule
 } from '@angular/material';
 import {BottomSheetOverviewExampleSheet, JournalComponent} from './journal/journal.component';
 import { ChatComponent } from './chat/chat.component';
+import { MessageComponent } from './chat/message/message.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ChatComponent } from './chat/chat.component';
     NewsComponent,
     JournalComponent,
     BottomSheetOverviewExampleSheet,
-    ChatComponent
+    ChatComponent,
+    MessageComponent
   ],
   entryComponents: [BottomSheetOverviewExampleSheet],
   imports: [
@@ -48,7 +50,9 @@ import { ChatComponent } from './chat/chat.component';
     MatTabsModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
