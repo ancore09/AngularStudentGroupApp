@@ -1,0 +1,41 @@
+.mat-list-item.mat-list-item-word-wrap {
+  height: initial !important;
+}
+.mat-list-item-word-wrap .mat-line {
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+
+mat-card {
+  margin-bottom: 16px;
+}
+
+mat-card img {
+   max-height: 500px;
+}
+
+mat-expansion-panel p {
+  font-size: 16px;
+}
+
+.container {
+  padding: 5%;
+  padding-top: 5%;
+  margin: auto;
+  width: 50%;
+}
+
+@media all and (max-width: 720px) and (min-width: 0px) {
+  .container {
+    padding: 5%;
+    padding-top: 15%;
+    margin-top: 0%;
+    width: 90%;
+    font-size: 20px;
+  }
+
+  mat-expansion-panel-header {
+    font-size: 20px;
+  }
+}
+

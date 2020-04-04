@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" style="position: fixed; z-index: 9999; height: 60px" class="mat-elevation-z10">
+  <span class="logo"></span>
+  <span class="example-fill-remaining-space"></span>
+  <button mat-button routerLink="news">News</button>
+  <button mat-button routerLink="journal">Journal</button>
+  <button mat-button routerLink="news">Chat</button>
+  <button mat-button routerLink="journal">Profile</button>
+</mat-toolbar>
+
+<!--<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" style="padding: 8px; margin-top: 60px">
+    <a mat-raised-button color="accent" routerLink="/news">News</a><br>
+    <a mat-raised-button color="accent" routerLink="/journal">Journal</a><br>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+</mat-drawer-container>-->
+
+<router-outlet></router-outlet>
+

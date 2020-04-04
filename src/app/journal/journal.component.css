@@ -1,0 +1,19 @@
+.container {
+  padding: 5%;
+  padding-top: 5%;
+}
+
+table.mat-table, mat-paginator {
+  width: 100%;
+  border-spacing: 8px;
+}
+
+td, th {
+  padding: 10px;
+}
+
+@media all and (max-width: 720px) and (min-width: 0px) {
+  .container {
+    padding-top: 20%;
+  }
+}
