@@ -26,6 +26,9 @@ export class JournalService {
     this.http.get<any>(`${environment.ws_url}/getLessons?groupid=1&groupid=2&loginid=1`).subscribe(response => {
       this.lessonList = response;
       this.lessonList = [...this.lessonList, ...response];
+      this.lessonList = [...this.lessonList, ...response];
+      this.lessonList = [...this.lessonList, ...response];
+      this.lessonList = [...this.lessonList, ...response];
       console.log(this.lessonList);
       return response;
     });

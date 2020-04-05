@@ -20,6 +20,12 @@ import {
 import {BottomSheetOverviewExampleSheet, JournalComponent} from './journal/journal.component';
 import { ChatComponent } from './chat/chat.component';
 import { MessageComponent } from './chat/message/message.component';
+import { UserComponent } from './user/user.component';
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from '@angular/forms';
+import {ChatService} from './chat/chat.service';
+import {CookieService} from 'ngx-cookie-service';
+import {WebsocketService} from './websocket.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,9 @@ import { MessageComponent } from './chat/message/message.component';
     JournalComponent,
     BottomSheetOverviewExampleSheet,
     ChatComponent,
-    MessageComponent
+    MessageComponent,
+    UserComponent,
+    LoginComponent
   ],
   entryComponents: [BottomSheetOverviewExampleSheet],
   imports: [
@@ -52,9 +60,10 @@ import { MessageComponent } from './chat/message/message.component';
     MatSortModule,
     MatPaginatorModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ChatService, WebsocketService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

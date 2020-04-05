@@ -1,0 +1,15 @@
+<div class="container">
+  <mat-form-field appearance="outline">
+    <mat-label>Outline form field</mat-label>
+    <input matInput placeholder="Placeholder" #inputElementLogin [(ngModel)]="login">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>Outline form field</mat-label>
+    <input matInput placeholder="Placeholder" #inputElementPass [(ngModel)]="password">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="accent" (click)="auth()">Login</button>
+</div>

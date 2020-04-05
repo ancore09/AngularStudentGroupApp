@@ -21,10 +21,12 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@types/sha1": "^1.1.2",
     "@types/socket.io-client": "^1.4.32",
     "material-components-web": "^5.1.0",
     "ngx-cookie-service": "^2.3.0",
     "rxjs": "~6.4.0",
+    "sha1": "^1.1.1",
     "socket.io-client": "^2.3.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
