@@ -13,7 +13,7 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
     this.newsService.loadNews();
-    this.journalService.loadJournal();
+    // this.journalService.loadJournal();
   }
 
 }

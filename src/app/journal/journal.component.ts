@@ -10,7 +10,7 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet'
 })
 export class JournalComponent implements OnInit {
   displayedColumns: string[] = ['datedmy', 'theme', 'homework'];
-  dataSource = new MatTableDataSource(this.journalService.lessonList);
+  dataSource = new MatTableDataSource<Lesson>([]);
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -21,6 +21,10 @@ export class JournalComponent implements OnInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.paginator._changePageSize(10);
+
+    this.journalService.loadJournal().subscribe((data: Lesson[]) => {
+      this.dataSource.data = data;
+    });
   }
 
   openBottomSheet(element): void {

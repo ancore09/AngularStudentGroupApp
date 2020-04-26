@@ -12,12 +12,12 @@ button {
 }
 
 .logo:before {
-  content: "Telegraf";
+  content: "Mercury";
 }
 
 @media all and (max-width: 720px) and (min-width: 0px) {
   .logo:before {
-    content: "T";
+    content: "Merc";
     font-size: 20px;
   }
 }

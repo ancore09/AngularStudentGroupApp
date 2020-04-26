@@ -1,7 +1,12 @@
 <div class="container">
-  <ul class="alt" id="messages">
-    <app-message *ngFor="let msg of chatService.mesList; let i = index" [message]="msg"></app-message>
-  </ul>
+<!--  <ul class="alt" id="messages">-->
+<!--    <app-message *ngFor="let msg of chatService.mesList; let i = index" [message]="msg"></app-message>-->
+<!--  </ul>-->
+  <mat-list>
+    <mat-list-item dense *ngFor="let msg of chatService.mesList; let i = index">
+      <p>{{msg.memberData.nick}}: {{msg.body}}</p>
+    </mat-list-item>
+  </mat-list>
   <mat-form-field appearance="outline">
     <mat-label>Outline form field</mat-label>
     <input matInput placeholder="Placeholder" #inputElement (keydown.enter)="sendMessage(inputElement.value, $event); inputElement.value=''">

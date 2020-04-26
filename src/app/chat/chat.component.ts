@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {ChatService, MemberData, Message} from './chat.service';
+import {UserService} from '../user/user.service';
 
 @Component({
   selector: 'app-chat',
@@ -11,7 +12,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
   k = 0;
 
-  constructor(private chatService: ChatService) { }
+  constructor(private chatService: ChatService, private userService: UserService) { }
 
   ngOnInit() {
     this.chatService.loadMessages();
@@ -23,7 +24,7 @@ export class ChatComponent implements OnInit, OnDestroy {
 
   sendMessage(msg, event) {
     event.preventDefault();
-    const message = new Message(this.k, msg, new MemberData('nick', '#cc7832'), true);
+    const message = new Message(this.k, msg, new MemberData(this.userService.user.NickName, this.userService.user.data.color), true);
     this.chatService.sendMessage(message);
     this.k++;
   }
