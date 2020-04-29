@@ -137,6 +137,7 @@ export class UserService {
   isAdmin: boolean;
 
   constructor(private httpClient: HttpClient, private cookie: CookieService, private router: Router) {
+    console.log('User Constructor');
     if (cookie.get('login') && cookie.get('passhash')) {
       this.cookies = true;
       this.authUser(cookie.get('login'), cookie.get('passhash'), () => {

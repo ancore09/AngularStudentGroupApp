@@ -1,0 +1,16 @@
+<div mat-dialog-content>
+  <p>Create New</p>
+  <mat-form-field style="display: block;">
+    <input matInput [(ngModel)]="data.title" placeholder="Title">
+  </mat-form-field>
+  <mat-form-field style="display: block;">
+    <textarea matInput [(ngModel)]="data.body" placeholder="Body"></textarea>
+  </mat-form-field>
+  <mat-form-field style="display: block;">
+    <input matInput [(ngModel)]="data.epilogue" placeholder="Epilogue">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="[data.title, data.body, data.epilogue]" cdkFocusInitial>Ok</button>
+</div>

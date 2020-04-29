@@ -6,11 +6,11 @@ import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import { NewsComponent } from './news/news.component';
+import {DialogNewsComponent, NewsComponent} from './news/news.component';
 import {AppRoutingModule} from './app-routing.module';
 import {
   MatButtonModule,
-  MatCardModule,
+  MatCardModule, MatDialogModule,
   MatExpansionModule, MatFormFieldModule,
   MatGridListModule, MatIconModule, MatInputModule,
   MatListModule, MatPaginatorModule, MatSelectModule,
@@ -36,9 +36,10 @@ import {WebsocketService} from './websocket.service';
     ChatComponent,
     MessageComponent,
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    DialogNewsComponent
   ],
-  entryComponents: [BottomSheetOverviewExampleSheet],
+  entryComponents: [BottomSheetOverviewExampleSheet, DialogNewsComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -61,7 +62,8 @@ import {WebsocketService} from './websocket.service';
     MatPaginatorModule,
     MatIconModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   providers: [ChatService, WebsocketService, CookieService],
   bootstrap: [AppComponent]

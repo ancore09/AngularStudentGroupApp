@@ -25,6 +25,22 @@ mat-expansion-panel p {
   width: 50%;
 }
 
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.floatingbutton {
+  position: fixed;
+  z-index: 9999;
+  margin-left: 43vw;
+  margin-top: 80vh;
+}
+
 @media all and (max-width: 720px) and (min-width: 0px) {
   .container {
     padding: 5%;
@@ -32,6 +48,13 @@ mat-expansion-panel p {
     margin-top: 0%;
     width: 90%;
     font-size: 20px;
+  }
+
+  .floatingbutton {
+    position: fixed;
+    z-index: 9999;
+    margin-left: 75vw;
+    margin-top: 80vh;
   }
 
   mat-expansion-panel-header {
