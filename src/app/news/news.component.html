@@ -3,7 +3,7 @@
       <mat-card-header>
         <mat-card-title>{{newItem.title}}</mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="http://192.168.1.129:3000/{{newItem.filehash}}">
+      <img mat-card-image src="http://194.67.92.182:3000/{{newItem.filehash}}">
       <mat-expansion-panel class="mat-elevation-z0">
         <mat-expansion-panel-header *ngIf="!newItem.showing" (click)="newItem.showing = !newItem.showing">Показать новость</mat-expansion-panel-header>
         <mat-expansion-panel-header *ngIf="newItem.showing" (click)="newItem.showing = !newItem.showing">Скрыть новость</mat-expansion-panel-header>

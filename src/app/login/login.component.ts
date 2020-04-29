@@ -18,8 +18,9 @@ export class LoginComponent implements OnInit {
   }
 
   auth() {
-    // this.router.navigate(['/news']);
     this.userService.authUser(this.login, this.password, () => {
+      this.cookie.set('login', this.login);
+      this.cookie.set('passhash', this.password);
       this.router.navigate(['/news']);
     });
   }

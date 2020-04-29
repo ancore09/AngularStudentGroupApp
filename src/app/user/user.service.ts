@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {MemberData} from '../chat/chat.service';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {CookieService} from 'ngx-cookie-service';
+import {Router} from '@angular/router';
 
 export class User {
   private _ID: number;
@@ -134,7 +136,14 @@ export class UserService {
   isLogin: boolean;
   isAdmin: boolean;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private cookie: CookieService, private router: Router) {
+    if (cookie.get('login') && cookie.get('passhash')) {
+      this.cookies = true;
+      this.authUser(cookie.get('login'), cookie.get('passhash'), () => {
+        router.navigate(['/news']);
+      });
+    }
+  }
 
   authUser(login: string, hash: string, func) {
     this.httpClient.get<User>(`${environment.ws_url}/auth?login=${login}&passwordhash=${hash}`).subscribe(response => {
