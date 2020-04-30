@@ -24,6 +24,10 @@ export class JournalComponent implements OnInit {
 
     this.journalService.loadJournal().subscribe((data: Lesson[]) => {
       this.dataSource.data = data;
+      this.dataSource.data = [...this.dataSource.data, ...data];
+      this.dataSource.data = [...this.dataSource.data, ...data];
+      this.dataSource.data = [...this.dataSource.data, ...data];
+      this.dataSource.data = [...this.dataSource.data, ...data];
     });
   }
 

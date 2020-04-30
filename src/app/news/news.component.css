@@ -22,7 +22,7 @@ mat-expansion-panel p {
   padding: 5%;
   padding-top: 5%;
   margin: auto;
-  width: 50%;
+  width: 40%;
 }
 
 .example-container {
@@ -39,9 +39,19 @@ mat-expansion-panel p {
   z-index: 9999;
   margin-left: 43vw;
   margin-top: 80vh;
+  background-color: #3e6a97;
 }
 
-@media all and (max-width: 720px) and (min-width: 0px) {
+mat-icon {
+  color: white;
+}
+
+mat-card, mat-expansion-panel {
+  background-color: #203040;
+  color: white;
+}
+
+@media all and (max-width: 800px) and (min-width: 0px) {
   .container {
     padding: 5%;
     padding-top: 15%;
@@ -51,10 +61,31 @@ mat-expansion-panel p {
   }
 
   .floatingbutton {
-    position: fixed;
+    /*position: fixed;*/
     z-index: 9999;
     margin-left: 75vw;
-    margin-top: 80vh;
+    margin-top: 75vh;
+  }
+
+  mat-expansion-panel-header {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 800px) and (min-width: 0px) and (max-height: 800px) {
+  .container {
+    padding: 5%;
+    padding-top: 15%;
+    margin-top: 0%;
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .floatingbutton {
+    /*position: fixed;*/
+    z-index: 9999;
+    margin-left: 73vw;
+    margin-top: 69vh;
   }
 
   mat-expansion-panel-header {

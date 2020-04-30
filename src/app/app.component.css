@@ -15,6 +15,10 @@ button {
   content: "Mercury";
 }
 
+.mat-toolbar {
+  background-color: #3e6a97;
+}
+
 @media all and (max-width: 720px) and (min-width: 0px) {
   .logo:before {
     content: "Merc";
