@@ -1,0 +1,107 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$primary: (
+  50: #E3E4E6,
+  100: #BABDC0,
+  200: #8C9196,
+  300: #5D646B,
+  400: #3B434C,
+  500: #18222C,
+  600: #151E27,
+  700: #111921,
+  800: #0E141B,
+  900: #080C10,
+  A100: #5498FF,
+  A200: #217AFF,
+  A400: #005FED,
+  A700: #0055D4,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+
+
+$accent: (
+  50 : #e8edf3,
+  100 : #c5d2e0,
+  200 : #9fb5cb,
+  300 : #7897b6,
+  400 : #5b80a7,
+  500 : #3e6a97,
+  600 : #38628f,
+  700 : #305784,
+  800 : #284d7a,
+  900 : #1b3c69,
+  A100 : #a5c8ff,
+  A200 : #72a9ff,
+  A400 : #3f8aff,
+  A700 : #257bff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  )
+);
+$warn: mat-palette($mat-red);
+
+$theme: mat-light-theme(mat-palette($primary), mat-palette($accent), $warn);
+
+@include angular-material-theme($theme);
+
+.body-background {
+  background-color: mat-color($primary, 600);
+}
+
+.card-background {
+  //@include mat-card-theme($theme);
+  background-color: mat-color($primary, 500);
+  color: mat-color($accent, 100);
+}
+
+.mat-table, .mat-paginator {
+  background-color: mat-color($primary, 500);
+  color: mat-color($accent, 500);
+}
+
+.mat-select-value, .mat-select-arrow {
+  color: mat-color($accent, 500);
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: mat-color($accent, 500);
+}
+
+.mat-raised-button {
+  background-color: mat-color($accent, 500);
+  color: white;
+}
+
+.cell, .header {
+  color: mat-color($accent, 100);
+}

@@ -12,7 +12,7 @@ export interface DialogData {
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css']
+  styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
   title: string;
@@ -50,7 +50,7 @@ export class NewsComponent implements OnInit {
 @Component({
   selector: 'app-dialog-news',
   templateUrl: './news.dialog.component.html',
-  styleUrls: ['./news.dialog.component.css']
+  styleUrls: ['./news.dialog.component.scss']
 })
 export class DialogNewsComponent {
 

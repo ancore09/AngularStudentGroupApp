@@ -6,7 +6,7 @@ import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet'
 @Component({
   selector: 'app-journal',
   templateUrl: './journal.component.html',
-  styleUrls: ['./journal.component.css']
+  styleUrls: ['./journal.component.scss']
 })
 export class JournalComponent implements OnInit {
   displayedColumns: string[] = ['datedmy', 'theme', 'homework'];
