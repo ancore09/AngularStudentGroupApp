@@ -42,11 +42,13 @@ export class ChatService {
   loadMessages() {
     this.http.get<any>(`${environment.ws_url}/getMessages`).subscribe(response => {
       this.mesList = response;
+      console.log(response);
     });
     // establish a connection to websocket
     this.messages = this.wsService
       .connect() as Subject<any>;
     map((response: any): any => {
+      console.log(response);
       return response;
     });
   }

@@ -22,8 +22,14 @@ export class WebsocketService {
     this.observable = new Observable(observer => {
       this.socket.on('message', (data) => {
         // console.log('Mes received!');
-        // console.log(data);
-        observer.next(data);
+        console.log(data);
+        let parsed = data;
+        try {
+          parsed = JSON.parse(data);
+        } catch (e) {
+          console.log(e);
+        }
+        observer.next(parsed);
       });
       return () => {
         // this.socket.emit('leave');
