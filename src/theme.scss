@@ -33,9 +33,6 @@ $primary: (
     A700 : #ffffff,
   )
 );
-
-
-
 $accent: (
   50 : #e8edf3,
   100 : #c5d2e0,
@@ -104,4 +101,9 @@ $theme: mat-light-theme(mat-palette($primary), mat-palette($accent), $warn);
 
 .cell, .header {
   color: mat-color($accent, 100);
+}
+
+.messages {
+  border: 1px solid mat-color($accent, 500);
+  border-radius: 20px;
 }
